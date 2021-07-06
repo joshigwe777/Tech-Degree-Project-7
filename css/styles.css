@@ -36,12 +36,7 @@ header {
 }
 
 
-.bell {
-    fill: white;
-    /* swidth: auto; */
-    width: 2rem;
-    height: 1rem;
-}
+
 img {
     border-radius: 50%;
     max-width: 50%;
