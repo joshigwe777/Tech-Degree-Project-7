@@ -2,6 +2,11 @@ const alertBanner = document.getElementById("alert");
 const trafficCanvas = document.getElementById("traffic-chart");
 const dailyCanvas = document.getElementById("daily-chart");
 const mobileCanvas = document.getElementById("mobile-chart");
+const user = document.getElementById("userField");
+const message = document.getElementById("messageField");
+const send = document.getElementById("send");
+
+
 
 // create HTML for the banner
 alertBanner.innerHTML = 
@@ -114,8 +119,22 @@ let dailyChart = new Chart(dailyCanvas, {
     options: dailyOptions
 });
 
+// ISSUES WITH  THIS CHART DISPLAYING
 let mobileChart = new Chart(mobileCanvas, {
     type: 'doughnut',
     data: mobileData,
     options: mobileOptions
 });
+
+send.addEventListener('click', () => {
+    // ensure that user and message fields are filled out
+    if(user.value === "" && message.value === "") {
+        alert("Please fill out the user and message fields before sending");
+    }   else if(user.value === "") {
+        alert("Please fill out the user field before sending");
+    }   else if(message.value === "") {
+        alert("Please fill out the message field before sending");
+    } else {
+        alert(`Message successfully sent to: ${user.value}`);
+    }
+})
