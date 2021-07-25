@@ -19,7 +19,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center; 
-    background-color: rgb(201, 158, 241);
+    background-color: rgb(90, 57, 238);
     color: white;
     margin: 0;
     padding: 0;
@@ -61,7 +61,7 @@ header {
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: blueviolet;
+    background-color: rgb(43, 13, 179);
 }
 
 .navigation svg {
@@ -86,16 +86,31 @@ header {
 
 .headline {
     grid-area: headline;
+    max-width: 30%;
 }
 
 .main-header-search {
     grid-area: search;
-    padding-top: 15px;
-    padding: auto;
+}
+
+
+.search {
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(224, 223, 223);
+    
 }
 
 .alert {
     grid-area: alert;
+    background-color: rgb(43, 13, 179);
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    margin-top: 20px;
 }
 .alert-banner {
     display: flex;
@@ -108,13 +123,24 @@ svg {
     height: 50px;
 }
 
+
 .traffic-nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     list-style-type: none;
+    font-weight: bold;
 }
 
+.traffic,
+.mobile-users,
+.daily-traffic {
+    border-bottom: 2px solid black;
+}
+
+
+
+/* media queries  */
 
 
 @media (min-width: 768px) {
