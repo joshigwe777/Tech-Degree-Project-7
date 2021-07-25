@@ -80,7 +80,7 @@ header {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "headline search"
-    "alert";
+    "alert alert";
 }
 
 
@@ -90,16 +90,32 @@ header {
 
 .main-header-search {
     grid-area: search;
+    padding-top: 15px;
+    padding: auto;
 }
 
 .alert {
     grid-area: alert;
+}
+.alert-banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 svg {
     width: 50px;
     height: 50px;
 }
+
+.traffic-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+
 
 @media (min-width: 768px) {
     .grid-container {
