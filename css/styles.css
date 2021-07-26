@@ -140,6 +140,8 @@ svg {
 
 .social-container {
     text-align: center;
+    border-top: solid black .8px;
+    border-bottom: solid black .8px;
 }
 
 .social-box {
@@ -154,18 +156,55 @@ svg {
 }
 
 .social-svg {
-    fill:rgb(90, 57, 238);
+    background-color:rgb(90, 57, 238);
+    fill:white;
+    padding: 8px;
+    border-radius: 50%;;
     margin: 50%;
 }
 
-.traffic,
-.mobile-users,
-.daily-traffic {
-    border-bottom: 2px solid black;
+.members-container,
+.activity-container {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    border-bottom: solid black .8px;
 }
 
 
 
+.profile-image {
+    border-radius: 50%;;
+}
+
+.widget-container-full {
+    width: 100%;
+}
+
+.message {
+    border-bottom: solid black .8px;
+    padding-bottom: 10px;
+}
+
+.widget-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#userField,
+#messageField {
+    background-color: silver;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+#send {
+    height: 50px;
+    border-radius: 5px;
+    background-color:rgb(90, 57, 238);
+    color: white;
+}
 /* media queries  */
 
 
