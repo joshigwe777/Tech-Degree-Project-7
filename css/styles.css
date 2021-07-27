@@ -12,6 +12,7 @@
     "head"
     "navigation"
     "main-section";
+    max-width: 320px;
 }
 /* Header Styles */
 header {
@@ -63,6 +64,7 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
     background-color: rgb(43, 13, 179);
+    max-width: 320px;
 }
 
 .navigation svg {
@@ -82,6 +84,8 @@ header {
     grid-template-areas: 
     "headline search"
     "alert alert";
+    max-width: 320px;
+    padding:0;
 }
 
 
