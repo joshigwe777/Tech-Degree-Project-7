@@ -6,6 +6,7 @@
         <title>Web Dashboard</title>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js'></script>
         <link rel='stylesheet' href="css/styles.css"> 
+        <link rel='stylesheet' href="css/toggle-switch.css"> 
     </head>
     <body class="grid-container">
         <header class="head">
@@ -217,46 +218,47 @@
                 <section class="settings">
                     <h3>Settings</h3>
                     <!-- custon css toggle code -->
+                        <div class="settings-box">
+                        <label class="switch-light switch-candy" onclick="">
+                            <input type="checkbox">
+                        
+                            <strong>
+                            Send Email Notifications
+                            </strong>
+                        
+                            <span>
+                            <span>On</span>
+                            <span>Off</span>
+                            <a></a>
+                            </span>
+                        </label>
 
-                    <label class="switch-light switch-candy" onclick="">
-                        <input type="checkbox">
-                    
-                        <strong>
-                        Send Email Notifications
-                        </strong>
-                    
-                        <span>
-                        <span>On</span>
-                        <span>Off</span>
-                        <a></a>
-                        </span>
-                    </label>
+                        <label class="switch-light switch-candy" onclick="">
+                            <input type="checkbox">
+                        
+                            <strong>
+                            Set Profile to Public
+                            </strong>
+                        
+                            <span>
+                            <span>On</span>
+                            <span>Off</span>
+                            <a></a>
+                            </span>
+                        </label>
 
-                    <label class="switch-light switch-candy" onclick="">
-                        <input type="checkbox">
-                    
-                        <strong>
-                        Set Profile to Public
-                        </strong>
-                    
-                        <span>
-                        <span>On</span>
-                        <span>Off</span>
-                        <a></a>
-                        </span>
-                    </label>
+                        <select class="form-field" id="timezone">
+                            <option disabled selected>Select a Timezone</option>
+                            <option>Eastern</option>
+                            <option>Central</option>
+                            <option>Pacific</option>
+                            <option>Mountain</option>
+                        </select>
 
-                    <select class="form-field" id="timezone">
-                        <option disabled selected>Select a Timezone</option>
-                        <option>Eastern</option>
-                        <option>Central</option>
-                        <option>Pacific</option>
-                        <option>Mountain</option>
-                    </select>
-
-                    <div class="settings-button">
-                        <button class="button-primary" id="save">Save</button>
-                        <button class="button-disabled" id="cancel">Cancel</button>
+                        <div class="settings-button">
+                            <button class="button-primary" id="save">Save</button>
+                            <button class="button-disabled" id="cancel">Cancel</button>
+                        </div>
                     </div>
                 </section>
             </div>

@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    
 
 }
 
@@ -126,6 +127,7 @@ svg {
 
 .traffic-nav {
     display: flex;
+    width:100%;
     flex-direction: row;
     justify-content: space-around;
     list-style-type: none;
@@ -142,6 +144,7 @@ svg {
     text-align: center;
     border-top: solid black .8px;
     border-bottom: solid black .8px;
+    
 }
 
 .social-box {
@@ -169,6 +172,7 @@ svg {
     flex-direction:column;
     align-items: center;
     border-bottom: solid black .8px;
+    width: 100%;
 }
 
 
@@ -184,6 +188,7 @@ svg {
 .message {
     border-bottom: solid black .8px;
     padding-bottom: 10px;
+    width: 100%;
 }
 
 .widget-container {
@@ -206,6 +211,42 @@ svg {
     color: white;
 }
 /* media queries  */
+
+.settings-box {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#timezone {
+    background-color: silver;
+    
+}
+#timezone-select {
+    color:rgb(43, 13, 179);
+}
+
+.settings-button {
+    display: flex;
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.button-primary {
+    background-color: rgb(90, 57, 238);
+}
+
+.button-disabled {
+    color:rgb(51, 50, 50);
+}
+
+.button-primary,
+.button-disabled {
+    margin: auto;
+    width:45%;
+    color: white;
+    border-radius: 5px;
+}
 
 
 @media (min-width: 768px) {
