@@ -7,7 +7,7 @@
 .grid-container {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: max-content;
+    grid-template-columns: 100%;
     grid-template-areas: 
     "head"
     "navigation"
@@ -75,6 +75,8 @@ header {
 }
 
 .main-section {
+    display: grid;
+    grid-template-columns: 100%;
     grid-area: main-section;
 }
 
@@ -85,7 +87,8 @@ header {
     grid-template-areas: 
     "headline search"
     "alert alert";
-    padding:0;
+    padding: 0;
+    grid-area: main-header;
 }
 
 
@@ -128,7 +131,9 @@ svg {
     height: 50px;
 }
 
-
+.traffic {
+    grid-area: traffic;
+}
 .traffic-nav {
     display: flex;
     width:100%;
@@ -144,10 +149,19 @@ svg {
     padding: 7px;
 }
 
+.daily {
+    grid-area: daily;
+}
+
+.mobile {
+    grid-area: mobile;
+}
+
 .social-container {
     text-align: center;
     border-top: solid black .8px;
     border-bottom: solid black .8px;
+    grid-area: social;
     
 }
 
@@ -179,6 +193,13 @@ svg {
     width: 100%;
 }
 
+.members {
+    grid-area: members;
+}
+
+.activity {
+    grid-area: recent;
+}
 
 
 .profile-image {
@@ -193,6 +214,10 @@ svg {
     border-bottom: solid black .8px;
     padding-bottom: 10px;
     width: 100%;
+    grid-area: message;
+}
+.widget-container-full {
+    width: 95vw;
 }
 
 .widget-container {
@@ -214,8 +239,10 @@ svg {
     background-color:rgb(90, 57, 238);
     color: white;
 }
-/* media queries  */
 
+.settings {
+    grid-area: settings;
+}
 .settings-box {
     display:flex;
     flex-direction: column;
@@ -252,6 +279,7 @@ svg {
     border-radius: 5px;
 }
 
+/* media queries  */
 
 @media (min-width: 768px) {
     .grid-container {
@@ -260,39 +288,46 @@ svg {
         "head head"
         "navigation main-section";
     }
-}
-.main-section {
-    display: grid;
-}
-@media (min-width: 768px) {
-    .main-section {
-        grid-template-columns: 1fr 1fr;
+    .navigation {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
-}
+    .main-section {
+        grid-template-areas:
+        "main-header main-header"
+        "traffic traffic"
+        "daily mobile"
+        "social social"
+        "members members"
+        "recent recent"
+        "message message"
+        "settings settings" ;
+        grid-template-columns: 100%;
+    }
 
-@media (min-width: 768px) {
     .traffic, .social-container {
         grid-column: 1 / span 2;
     }
-}
+    
+    .social-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .social-box {
+        width: 100%;
+        margin: 5px;
+    }
 
-@media (min-width: 768px) {
-    .daily-traffic, .members, .message {
+    .daily, .members, .message {
         grid-column: 1 / span 1;
     }
-}
 
-@media (min-width: 768px) {
     .mobile-users, .activity, .settings {
         grid-column: 2 / span 1;
     }
-}
 
-.widget-container-full {
-    width: 95vw;
-}
-
-@media (min-width: 768px) {
     .widget-container-full{
         width: 90vw;
     }
@@ -300,3 +335,5 @@ svg {
         width: 45vw;
     }
 }
+
+
