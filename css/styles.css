@@ -207,6 +207,7 @@ svg {
     padding-bottom: 10px;
     width: 100%;
     grid-area: message;
+    border-bottom: solid black .5px;
 }
 .widget-container-full {
     width: 95vw;
@@ -287,6 +288,7 @@ svg {
         grid-template-areas:
         "head head"
         "navigation main-section";
+        max-width: 100%;
     }
     .navigation {
         flex-direction: column;
@@ -336,6 +338,7 @@ svg {
     padding: 3rem;
 }
 
+
 .members-container, .activity-container {
     flex-direction: row;
     justify-content: space-between;
@@ -367,6 +370,9 @@ svg {
     .members, .message {
         border-right: solid black .5px;
        
+    }
+    .message {
+        border-bottom: none;
     }
 
     .settings, .activity, .members, .message {
