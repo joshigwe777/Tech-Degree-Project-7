@@ -42,12 +42,18 @@ header {
 }
 
 
-#bell {
+#bell1 {
     width: 25px;
     height: 100%;
     margin-left: 15px;
     fill: white;
 }
+
+#bell1:hover {
+    fill: greenyellow;
+}
+
+
 
 #student-img {
     width: 40px;
@@ -60,7 +66,7 @@ header {
 
 
 .navigation {
-    grid-area: navigation;
+    /* grid-area: navigation; */
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -75,8 +81,6 @@ header {
 }
 
 .main-section {
-    display: grid;
-    grid-template-columns: 100%;
     grid-area: main-section;
 }
 
@@ -88,17 +92,18 @@ header {
     "headline search"
     "alert alert";
     padding: 0;
-    grid-area: main-header;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 
 .headline {
-    grid-area: headline;
+     grid-area: headline; 
     max-width: 30%;
 }
 
 .main-header-search {
-    grid-area: search;
+     grid-area: search; 
 }
 
 
@@ -132,8 +137,10 @@ svg {
 }
 
 .traffic {
-    grid-area: traffic;
+    padding-left: 1rem;
 }
+
+
 .traffic-nav {
     display: flex;
     width:100%;
@@ -149,19 +156,11 @@ svg {
     padding: 7px;
 }
 
-.daily {
-    grid-area: daily;
-}
-
-.mobile {
-    grid-area: mobile;
-}
 
 .social-container {
     text-align: center;
     border-top: solid black .8px;
     border-bottom: solid black .8px;
-    grid-area: social;
     
 }
 
@@ -193,17 +192,11 @@ svg {
     width: 100%;
 }
 
-.members {
-    grid-area: members;
-}
-
-.activity {
-    grid-area: recent;
-}
 
 
 .profile-image {
-    border-radius: 50%;;
+    border-radius: 50%;
+    margin: 1rem;
 }
 
 .widget-container-full {
@@ -211,7 +204,6 @@ svg {
 }
 
 .message {
-    border-bottom: solid black .8px;
     padding-bottom: 10px;
     width: 100%;
     grid-area: message;
@@ -282,6 +274,14 @@ svg {
 /* media queries  */
 
 @media (min-width: 768px) {
+    #bell {
+        margin-left: 850px;
+    }
+.header-left {
+    border: none;
+}
+
+
     .grid-container {
         grid-template-columns: 55px 1fr;
         grid-template-areas:
@@ -303,7 +303,7 @@ svg {
         "recent recent"
         "message message"
         "settings settings" ;
-        grid-template-columns: 100%;
+         grid-template-columns: 100%;
     }
 
     .traffic, .social-container {
@@ -319,12 +319,33 @@ svg {
         width: 100%;
         margin: 5px;
     }
+.dailymobile {
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    border: solid black .5px;
+    margin-top: 3rem;
+}
 
-    .daily, .members, .message {
+.daily {
+    border-right: solid black .5px;
+    padding: 3rem;
+}
+
+.mobile_users {
+    padding: 3rem;
+}
+
+.members-container, .activity-container {
+    flex-direction: row;
+    justify-content: space-between;
+} 
+
+     .members, .message {
         grid-column: 1 / span 1;
     }
 
-    .mobile-users, .activity, .settings {
+    .activity, .settings {
         grid-column: 2 / span 1;
     }
 
@@ -333,7 +354,26 @@ svg {
     }
     .widget-container-half {
         width: 45vw;
+        height: 45vw;
     }
+}
+
+@media (min-width: 1024px) {
+    .membersactivity, .messagesettings {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .members, .message {
+        border-right: solid black .5px;
+       
+    }
+
+    .settings, .activity, .members, .message {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
 }
 
 
