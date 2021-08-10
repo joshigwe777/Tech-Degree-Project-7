@@ -267,7 +267,7 @@ svg {
 .button-disabled {
     margin: auto;
     width:45%;
-    color: white;
+    color: rgb(26, 25, 25);
     border-radius: 5px;
 }
 
